@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8"></meta>
+    <title>Cylinder Effects</title>
+    <meta name="viewport" content="width=device-width, initial-scale=0.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="//at.alicdn.com/t/font_2995610_j2vh6coask.js"></script>
+    <link href='https://fonts.loli.net/css?family=Open+Sans' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="nav-left-menu">
+            <ul>
+                <li class="menu-button" style="--i:0">首页设计</li>
+                <li class="menu-button" style="--i:1">产品细节</li>
+                <li class="menu-button" style="--i:2">关于我们</li>
+            </ul>
+        </div>
+        <div class="container">
+            <h2>去中心化vs中心化Metaverse</h2>
+            <ul>
+                <li><svg class="icon" aria-hidden="true"><use xlink:href="#icon-xinlangweibo"></use></svg></li>
+                <li><svg class="icon" aria-hidden="true"><use xlink:href="#icon-weixin"></use></svg></li>
+                <li><svg class="icon" aria-hidden="true"><use xlink:href="#icon-bilibili-line"></use></svg></li>
+                <li><svg class="icon" aria-hidden="true"><use xlink:href="#icon-douyin"></use></svg></li>
+            </ul>
+            <span>加密雲經濟體是下一個新興的市場投資前沿，而元宇宙（Metaverse）是Web3.0網際網絡發展前沿。什麼是Metaverse？Metaverse是結合一組相互連接、實驗式的3D虛擬世界，人們在其中生活，任何地方都可以實時交往，形成一個長久的、用戶擁有的網際網絡，使用者跨越數碼和物理世界。<br>
+                Metaverse正在形成，許多關鍵組件已開始出現，從電子商務到媒體甚至房地產，一切都正在形成，並正在發生革命性的變化。基於區塊鏈的分散虛擬世界，現在有Decentraland。<br>
+                Decentraland正在創建一個開放的Metaverse世界，用戶可以在其中登錄玩遊戲，玩遊戲賺Decentraland遊戲的原生幣。原生幣可以用來在遊戲購買NFT，包括土地或收藏品，並對Decentraland進行治理投票。NFT形成為玩家提供真實世界的價值交換的渠道，玩家在虛疑世界玩遊戲，在遊戲世界外亦有交易市場。</span>
+        </div>
+    </div>
+    <div class="nav-menu">
+        <div class="nav-menu-button" id="menu-button">
+            <img src="menu.svg"></img>
+        </div>
+        <div class="nav-menu-button cancel" id="cancel-button">
+            <img src="cancel.svg"></img>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    document.getElementById("menu-button").addEventListener("click", function(e) {
+        let navMenu = document.querySelector(".nav-menu")
+        navMenu.classList.toggle("nav-menu-button-animation")
+        let container = document.querySelector(".main-container")
+        container.classList.toggle("container-show-animation")
+        document.querySelectorAll(".menu-button").forEach(item => {
+            item.classList.toggle("active")
+        })
+    })
+    document.getElementById("cancel-button").addEventListener("click", function(e) {
+        let navMenu = document.querySelector(".nav-menu")
+        navMenu.classList.toggle("nav-menu-button-animation")
+        let container = document.querySelector(".main-container")
+        container.classList.toggle("container-show-animation")
+        document.querySelectorAll(".menu-button").forEach(item => {
+            item.classList.toggle("active")
+        })
+    })
+</script>
+</html>
