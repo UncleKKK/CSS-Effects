@@ -9,21 +9,27 @@
 </head>
 <body>
     <div class="navigation-menu-buttons">
-        <div class="menu-button" id="navigation-menu-button"><img src="menu.svg"></div>
-        <div class="menu-button cancel" id="navigation-cancel-button"><img src="cancel.svg"></div>
+        <div class="menu-button" id="menu-button">
+            <img src="menu.svg">
+        </div>
+        <div class="menu-button cancel" id="cancel-button">
+            <img src="cancel.svg">
+        </div>
     </div>
     <div class="container">
         <div class="content-container">
-            <h2>去中心化vs中心化Metaverse</h2>
+            <h2>关于Apache Log4j2漏洞引发的开源环境深省</h2>
             <ul>
                 <li><svg class="icon" aria-hidden="true"><use xlink:href="#icon-xinlangweibo"></use></svg></li>
                 <li><svg class="icon" aria-hidden="true"><use xlink:href="#icon-weixin"></use></svg></li>
                 <li><svg class="icon" aria-hidden="true"><use xlink:href="#icon-bilibili-line"></use></svg></li>
                 <li><svg class="icon" aria-hidden="true"><use xlink:href="#icon-douyin"></use></svg></li>
             </ul>
-            <span>加密雲經濟體是下一個新興的市場投資前沿，而元宇宙（Metaverse）是Web3.0網際網絡發展前沿。什麼是Metaverse？Metaverse是結合一組相互連接、實驗式的3D虛擬世界，人們在其中生活，任何地方都可以實時交往，形成一個長久的、用戶擁有的網際網絡，使用者跨越數碼和物理世界。
-                Metaverse正在形成，許多關鍵組件已開始出現，從電子商務到媒體甚至房地產，一切都正在形成，並正在發生革命性的變化。基於區塊鏈的分散虛擬世界，現在有Decentraland。
-                Decentraland正在創建一個開放的Metaverse世界，用戶可以在其中登錄玩遊戲，玩遊戲賺Decentraland遊戲的原生幣。原生幣可以用來在遊戲購買NFT，包括土地或收藏品，並對Decentraland進行治理投票。NFT形成為玩家提供真實世界的價值交換的渠道，玩家在虛疑世界玩遊戲，在遊戲世界外亦有交易市場</span>
+            <span>相信Log4j2这次漏洞的爆发会让很多人焦头烂额,加班加点地尽快修复漏洞以防止造成更多的损失。以至于让很多人怨声载道,吐糟甚至在网上言语攻击Log4j2官方。<br>
+                Log4j2是由Ralph Goers和两个小伙伴利用业余时间维护的开源项目,在开发者使用Log4j2的同时是否心存感激,感谢那些仅仅是为爱发电而不求回报的开源项目。截止到漏洞爆发时为Log4j2项目捐赠的小伙伴仅仅只有3人,虽然不太可能但并不排除github以外的捐赠,毕竟使用者都无法对开源抱有捐赠的可能性,何况是那些大佬们怎么能对一个并无商业价值的开源项目感兴趣。<br>
+                我们需要的是一个更好的开源环境,更是需要我们自己维护一个开源环境,希望终有一日开源可以商业化,保证我们可以使用更好的"轮子"的同时保证开源者的收益,不是仅仅是为爱发电出现问题还要遭受无情的抨击。<br>
+                
+                <a href="https://github.com/sponsors/rgoers"> Apache Log4j2捐赠链接</a></span>
         </div>
         <div class="left-menu">
             <ul>
@@ -34,14 +40,14 @@
         </div>
     </div>
     <script type="text/javascript">
-        document.getElementById("navigation-menu-button").addEventListener("click", () => {
+        document.getElementById("menu-button").addEventListener("click", () =>{
             document.querySelector(".navigation-menu-buttons").classList.toggle("navigation-active")
             document.querySelector(".container").classList.toggle("active")
             document.querySelectorAll(".left-menu-item").forEach(item => {
                 item.classList.toggle("left-menu-item-active")
             })
         })
-        document.getElementById("navigation-cancel-button").addEventListener("click", () => {
+        document.getElementById("cancel-button").addEventListener("click", () =>{
             document.querySelector(".navigation-menu-buttons").classList.toggle("navigation-active")
             document.querySelector(".container").classList.toggle("active")
             document.querySelectorAll(".left-menu-item").forEach(item => {

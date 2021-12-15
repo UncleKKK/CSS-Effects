@@ -1,3 +1,4 @@
+
 *
 {
     margin: 0;
@@ -6,23 +7,30 @@
 }
 :root
 {
+    --bgColor:#333;
+    --whiteColor:#fff;
     --weiboColor:#CD5D5C;
     --wxColor:#52D76C;
-    --douyinColor:#000000;
-    --bilibiliColor:#F76894;
-    --whiteColor:#ffffff;
-    --bgColor:#333;
-    --navigationColor:#6B61D3;
+    --biliColor:#F76894;
+    --douyinColor:#000;
+    --navBgColor:#6B61D3;
 }
-body 
+body
 {
-    width:100vw;
-    height:100vh;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     justify-content: center;
-    background-color:var(--bgColor);
+    background-color: var(--bgColor);
     overflow:hidden;
 }
+.icon {
+    width: 2em;
+    height: 2em;
+    vertical-align: center;
+    fill: var(--whiteColor);
+    overflow: hidden;
+ }
 .container
 {
     width: 100%;
@@ -30,36 +38,41 @@ body
     display: flex;
     justify-content: center;
     transform:rotate(0deg);
-    transition:all 0.3s linear;
+    transition: all 0.3s linear;
     transform-origin: 0 0;
+}
+.container .content-container::-webkit-scrollbar
+{
+    display: none;
 }
 .container .content-container
 {
     padding: 3em;
-    width:40em;
+    width: 40em;
     color: var(--whiteColor);
-    letter-spacing:0.5px;
     overflow:auto;
 }
 .container .content-container h2
 {
     margin: 20px 0;
-    font-size: 2em;
+    font-size:2em;
+    line-height: 1.5em;
 }
 .container .content-container span
 {
-    font-size:1.25em;
+    font-size: 1.25em;
+    line-height: 1.75em;
 }
-.container .content-container ul 
+.container .content-container ul
 {
-    margin: 40px 0;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    margin: 40px 0;
 }
 .container .content-container ul li
 {
-    list-style:none;
+    list-style: none;
     margin-right: 10px;
     border-radius: 50%;
     width:3em;
@@ -69,112 +82,115 @@ body
     align-items: center;
     cursor: pointer;
 }
+.container .content-container span a
+{
+    text-decoration: none;
+    color: var(--biliColor);
+    outline: none;
+    background: none;
+}
 .container .content-container ul li:nth-child(1)
 {
-    background: var(--weiboColor);
+    background:var(--weiboColor)
 }
 .container .content-container ul li:nth-child(2)
 {
-    background: var(--wxColor);
+    background:var(--wxColor)
 }
 .container .content-container ul li:nth-child(3)
 {
-    background: var(--bilibiliColor);
+    background:var(--biliColor)
 }
 .container .content-container ul li:nth-child(4)
 {
-    background: var(--douyinColor);
+    background:var(--douyinColor)
 }
 .container .content-container ul li:nth-child(1):hover
 {
+    --weiboColor: #fff;
     --whiteColor:#CD5D5C;
-    --weiboColor:#fff;
 }
 .container .content-container ul li:nth-child(2):hover
 {
+    --wxColor: #fff;
     --whiteColor:#52D76C;
-    --wxColor:#fff;
 }
 .container .content-container ul li:nth-child(3):hover
 {
+    --biliColor: #fff;
     --whiteColor:#F76894;
-    --bilibiliColor:#fff;
 }
 .container .content-container ul li:nth-child(4):hover
 {
+    --douyinColor: #fff;
     --whiteColor:#000;
-    --douyinColor:#fff;
 }
-.icon {
-    width: 2em;
-    height: 2em;
-    vertical-align: center;
-    fill: var(--whiteColor);
-    font-size:1em;
-    overflow: hidden;
- }
- .navigation-menu-buttons
- {
+.navigation-menu-buttons
+{
     position: absolute;
     top: -7.5em;
     left: -7.5em;
     width:15em;
     height: 15em;
-    background:var(--navigationColor);
+    background-color:var(--navBgColor);
     border-radius: 50%;
-    transform:rotate(0deg);
     transition: all 0.3s linear;
-    cursor: pointer;
     z-index: 10;
- }
- .navigation-menu-buttons .menu-button
- {
-     position: absolute;
-     right: 3em;
-     bottom: 3em;
-     height:3em;
-     width:3em;
- }
- .navigation-menu-buttons .menu-button img
- {
-     width:100%;
-     height:100%;
- }
- .navigation-menu-buttons .cancel
- {
-     left:3em;
-     transform:rotate(90deg);
- }
- .navigation-active
- {
-     transform:rotate(-90deg);
- }
+}
+.navigation-menu-buttons .menu-button
+{
+    position: absolute;
+    right: 3em;
+    bottom: 3em;
+    height:3em;
+    width:3em;
+    cursor:pointer;
+}
+.navigation-menu-buttons .menu-button img
+{
+    width:100%;
+    height:100%;
+}
+.navigation-menu-buttons .cancel
+{
+    left:3em;
+    transform: rotate(90deg);
+}
+.navigation-active
+{
+    transform: rotate(-90deg);
+}
 .container .left-menu
 {
     position: absolute;
     top: 0;
     left: -30em;
-    width:30em;
-    height:100%;
-    background:linear-gradient(to bottom right,#7BA8CE,#E08BE4)
+    height: 100%;
+    width: 30em;
+    background:linear-gradient(to bottom right, #7BA8CE,#E08BE4)
 }
 .container .left-menu ul
 {
     position: absolute;
-    bottom: 20%;
-    right: 5em;
-    transform:rotate(25deg);
+    bottom:20%;
+    right:5em;
+    transform: rotate(25deg)
 }
 .container .left-menu ul .left-menu-item
 {
     list-style: none;
-    transform: translateX(calc(var(--i) * 1em - 10em));
     font-size:1.25em;
-    font-family: sans-serif;
     color: #F3D6FD;
-    margin: 40px 0;
+    margin:40px 0;
+    font-family: sans-serif;
+    transform:translateX(calc(var(--i) * 1em - 10em));
     transition: all 0.3s linear 0.3s;
     cursor:pointer;
+}
+.container .left-menu ul .left-menu-item:hover
+{
+    color: var(--whiteColor);
+    text-shadow: 0 2px 4px #7F76E0;
 }
 .active
 {
@@ -183,15 +199,10 @@ body
 }
 .container .left-menu ul .left-menu-item-active
 {
-    transform:translateX(calc(var(--i) * 1em)) !important;
+    transform: translateX(calc(var(--i) * 1em)) !important;
 }
-.container .left-menu ul .left-menu-item:hover
+@media (max-width:768px)
 {
-    color: var(--whiteColor);
-    text-shadow: 0 2px 4px #7F76E0;
-    transition: all 0.3s linear;
-}
-@media (max-width: 768px){
     .navigation-menu-buttons
     {
         position: absolute;
@@ -199,11 +210,9 @@ body
         left: -5em;
         width:10em;
         height: 10em;
-        background:var(--navigationColor);
+        background-color:var(--navBgColor);
         border-radius: 50%;
-        transform:rotate(0deg);
         transition: all 0.3s linear;
-        cursor: pointer;
         z-index: 10;
     }
     .navigation-menu-buttons .menu-button
@@ -217,22 +226,22 @@ body
     .navigation-menu-buttons .cancel
     {
         left:2em;
-        transform:rotate(90deg);
+        transform: rotate(90deg);
     }
     .active
     {
         transform:rotate(-15deg) !important;
         height:120%;
     }
-    .container .left-menu ul .left-menu-item-active
-    {
-        transform:translateX(calc(var(--i) * 1em + 1.25em)) !important;
-    }
     .container .left-menu ul
     {
         position: absolute;
-        bottom: 20%;
-        right: 5em;
-        transform:rotate(15deg);
+        bottom:20%;
+        right:5em;
+        transform: rotate(15deg)
+    }
+    .container .left-menu ul .left-menu-item-active
+    {
+        transform: translateX(calc(var(--i) * 1em + 1.25em)) !important;
     }
 }
